@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National Steel Corporation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial Black', sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(to right, #1e3a8a, #111);
+      text-align: center;
+      padding: 100px 20px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #ccc;
+      max-width: 800px;
+      margin: auto;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 36px;
+      background: #2563eb;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: white;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+      transform: scale(1.1);
+    }
+    .factory-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      animation: fadeIn 2s ease-in-out;
+    }
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: #1f1f1f;
+      padding: 40px 25px;
+      border-radius: 20px;
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
+      transition: transform 0.4s, background 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-12px) scale(1.03);
+      background: #2a2a2a;
+    }
+    .card h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .card p {
+      color: #aaa;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    footer {
+      background: black;
+      text-align: center;
+      padding: 25px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NATIONAL STEEL CORPORATION</h1>
+    <p>Leading steel processing company specializing in precision pipe drawing, straightening, and cutting.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </header>
+
+  <!-- Factory Image Section -->
+  <section>
+    <img src="factory.jpeg" alt="National Steel Corporation Factory" class="factory-image" />
+  </section>
+
+  <section id="machines">
+    <h2>Our Machines</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Draw Machine</h3>
+        <p>Used for reducing the pipe’s outer diameter with a maximum OD capacity of <b>560mm</b>. It ensures precision while maintaining customizable pipe length.</p>
+      </div>
+      <div class="card">
+        <h3>Press Machine</h3>
+        <p>After drawing, pipes may bend. The press machine is used to straighten them, ensuring structural accuracy.</p>
+      </div>
+      <div class="card">
+        <h3>Benzo Cutting Machine</h3>
+        <p>Provides perfect cuts with high precision, making pipes ready for industrial use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out to us for high-quality steel processing solutions.</p>
+    <a href="tel:+919833579171" class="btn">Call Now</a>
+  </section>
+
+  <footer>
+    © <span id="year"></span> NATIONAL STEEL CORPORATION. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
